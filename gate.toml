@@ -1,0 +1,11 @@
+[gate]
+name = "gaterunner"
+
+[[step]]
+name = "compileall"
+command = ["python3", "-m", "compileall", "gaterunner.py", "tests"]
+
+[[step]]
+name = "test"
+command = ["python3", "-m", "unittest", "discover", "-s", "tests"]
+timeout_sec = 300
