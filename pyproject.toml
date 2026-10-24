@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaterunner"
+version = "0.1.0"
+description = "Unified local quality-gate runner: declared gate.toml steps, dangerous-pattern warnings, progress and ETA."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Sean Shaffer" }]
+keywords = ["ci", "quality-gate", "testing", "devtools"]
+
+[project.scripts]
+gaterunner = "gaterunner:main"
+
+[tool.setuptools]
+py-modules = ["gaterunner"]
